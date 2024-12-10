@@ -1,8 +1,9 @@
 package stack;
 
 class Stack {
+  StackNode top;
 
   boolean isEmpty() {
-    return true;
+    return top == null;
   }
 }
