@@ -1,5 +1,6 @@
 package stack;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
@@ -9,5 +10,8 @@ public class StackTest {
     public void testIsEmpty() {
         Stack stack = new Stack();
         assertTrue(stack.isEmpty());
+
+        stack.push(1);
+        assertFalse(stack.isEmpty());
     } 
 }
