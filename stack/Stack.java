@@ -1,7 +1,7 @@
 package stack;
 
 class Stack {
-  StackNode top;
+  Stack top;
   int stackSize;
 
   Stack() {
@@ -14,7 +14,7 @@ class Stack {
   }
 
   void push(int value) {
-    top = new StackNode(value, top);
+    top = new Stack(value, top);
     stackSize++;
   }
 
