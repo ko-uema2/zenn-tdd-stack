@@ -33,6 +33,19 @@ public class StackTest {
     }
 
     @Test
+    public void testPopThrowsExceptionWhenStackIsEmpty() {
+        Stack stack = new Stack();
+
+        try {
+            stack.pop();
+            fail("pop() should throw an exception when the stack is empty");
+        } catch (Exception e) {
+            assertTrue(e instanceof StackEmptyException);
+            assertEquals("Stack is empty", e.getMessage());
+        }
+    }
+
+    @Test
     public void testPeekThrowsExceptionWhenStackIsEmpty() {
         Stack stack = new Stack();
 
