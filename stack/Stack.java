@@ -18,4 +18,14 @@ class Stack {
 
     return top.value;
   }
+
+  int pop() {
+    if (isEmpty()) {
+      throw new StackEmptyException();
+    }
+
+    int value = top.value;
+    top = null;
+    return value;
+  }
 }
