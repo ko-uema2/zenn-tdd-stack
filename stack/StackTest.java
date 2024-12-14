@@ -19,14 +19,7 @@ public class StackTest {
     } 
 
     @Test
-    public void testPush() {
-        Stack stack = new Stack();
-        stack.push(1);
-        assertEquals(1, stack.top.value);
-    }
-
-    @Test
-    public void testPeek() {
+    public void testPushAndPeek() {
         Stack stack = new Stack();
         stack.push(1);
         assertEquals(1, stack.peek());
