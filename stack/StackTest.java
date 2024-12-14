@@ -70,4 +70,19 @@ public class StackTest {
         assertEquals(1, stack.pop());
         assertTrue(stack.isEmpty());
     }
+
+    @Test
+    public void testSize() {
+        Stack stack = new Stack();
+        assertEquals(0, stack.size());
+
+        stack.push(1);
+        assertEquals(1, stack.size());
+
+        stack.push(2);
+        assertEquals(2, stack.size());
+
+        stack.pop();
+        assertEquals(1, stack.size());
+    }
 }
