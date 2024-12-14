@@ -10,4 +10,8 @@ class Stack {
   void push(int value) {
     top = new StackNode(value);
   }
+
+  int peek() {
+    return top.value;
+  }
 }
