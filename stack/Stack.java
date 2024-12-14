@@ -25,7 +25,7 @@ class Stack {
     }
 
     int value = top.value;
-    top = null;
+    top = top.next;
     return value;
   }
 }
