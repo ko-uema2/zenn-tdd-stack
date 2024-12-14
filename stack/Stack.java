@@ -12,6 +12,10 @@ class Stack {
   }
 
   int peek() {
+    if (isEmpty()) {
+      throw new StackEmptyException();
+    }
+
     return top.value;
   }
 }
