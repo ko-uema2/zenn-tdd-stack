@@ -2,11 +2,18 @@ package stack;
 
 class Stack {
   Stack top;
+  Stack next;
+  int value;
   int stackSize;
 
   Stack() {
     top = null;
     stackSize = 0;
+  }
+
+  private Stack(int value, Stack next) {
+    this.value = value;
+    this.next = next;
   }
 
   boolean isEmpty() {
