@@ -8,7 +8,7 @@ class Stack {
   }
 
   void push(int value) {
-    top = new StackNode(value);
+    top = new StackNode(value, top);
   }
 
   int peek() {
