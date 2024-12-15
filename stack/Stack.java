@@ -1,20 +1,24 @@
 package stack;
 
 class Stack {
-  private Stack top;
-  private Stack next;
-  private int value;
+  private Node top;
   private int stackSize;
+
+  private class Node {
+    private final Node next;
+    private final int value;
+
+    private Node(final int value, final Node next) {
+      this.value = value;
+      this.next = next;
+    }
+  }
 
   private Stack() {
     top = null;
     stackSize = 0;
   }
 
-  private Stack(final int value, final Stack next) {
-    this.value = value;
-    this.next = next;
-  }
 
   static Stack create() {
     return new Stack();
@@ -25,7 +29,7 @@ class Stack {
   }
 
   void push(final int value) {
-    top = new Stack(value, top);
+    top = new Node(value, top);
     stackSize++;
   }
 
