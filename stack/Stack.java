@@ -1,10 +1,10 @@
 package stack;
 
 class Stack {
-  Stack top;
-  Stack next;
-  int value;
-  int stackSize;
+  private Stack top;
+  private Stack next;
+  private int value;
+  private int stackSize;
 
   Stack() {
     top = null;
