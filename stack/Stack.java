@@ -6,7 +6,7 @@ class Stack {
   private int value;
   private int stackSize;
 
-  Stack() {
+  private Stack() {
     top = null;
     stackSize = 0;
   }
@@ -14,6 +14,10 @@ class Stack {
   private Stack(final int value, final Stack next) {
     this.value = value;
     this.next = next;
+  }
+
+  static Stack create() {
+    return new Stack();
   }
 
   boolean isEmpty() {
