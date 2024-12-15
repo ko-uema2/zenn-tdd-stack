@@ -11,7 +11,7 @@ class Stack {
     stackSize = 0;
   }
 
-  private Stack(int value, Stack next) {
+  private Stack(final int value, final Stack next) {
     this.value = value;
     this.next = next;
   }
@@ -20,7 +20,7 @@ class Stack {
     return top == null;
   }
 
-  void push(int value) {
+  void push(final int value) {
     top = new Stack(value, top);
     stackSize++;
   }
